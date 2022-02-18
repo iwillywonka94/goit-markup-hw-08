@@ -1,0 +1,28 @@
+.hero {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1600px;
+  height: 600px;
+  background-color: #212121;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../image/bgphoto.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__container {
+  padding: 200px 0;
+}
+
+.hero__title {
+  color: var(--primary-white-color);
+  @include fonts(44px, 900, 1.36, 0.06em);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
