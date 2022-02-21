@@ -2,7 +2,6 @@
   margin-right: auto;
   margin-left: auto;
   max-width: 1600px;
-  height: 600px;
   background-color: #212121;
   background-repeat: no-repeat;
   background-position: center;
@@ -62,8 +61,11 @@
 }
 
 .hero__container {
-  padding: 200px 0;
+  padding: 118px 0;
   height: 100%;
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
 }
 
 .hero__title {

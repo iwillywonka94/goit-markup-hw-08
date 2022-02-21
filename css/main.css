@@ -501,6 +501,12 @@ img {
   width: 100%;
 }
 
+@media screen and (min-width: 1200px) {
+  .logo {
+    justify-content: flex-start;
+  }
+}
+
 .logo__link {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
@@ -519,6 +525,12 @@ img {
 
 .logo__link .fwhite {
   color: var(--primary-white-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .logo__link {
+    margin-right: 93px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -567,6 +579,7 @@ img {
 @media screen and (min-width: 1200px) {
   .contacts {
     flex-direction: row;
+    margin-left: auto;
   }
 }
 
@@ -582,7 +595,6 @@ img {
   .contacts__item {
     margin-right: 30px;
     margin-bottom: 0px;
-    margin-left: 0 auto;
   }
   .contacts__item:last-child {
     margin-right: 0;
@@ -636,7 +648,6 @@ img {
   margin-right: auto;
   margin-left: auto;
   max-width: 1600px;
-  height: 600px;
   background-color: #212121;
   background-repeat: no-repeat;
   background-position: center;
@@ -675,8 +686,14 @@ img {
 }
 
 .hero__container {
-  padding: 200px 0;
+  padding: 118px 0;
   height: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    padding: 200px 0;
+  }
 }
 
 .hero__title {
@@ -1167,13 +1184,20 @@ img {
 .portfolio-key {
   display: flex;
   justify-content: start;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
   .portfolio-key {
+    margin-bottom: 30px;
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-key {
+    margin-bottom: 50px;
   }
 }
 
@@ -1223,6 +1247,10 @@ img {
   margin-bottom: 30px;
   width: 100%;
   margin-left: 30px;
+}
+
+.allworks__list:nth-child(n + 7) {
+  margin-bottom: 0;
 }
 
 .allworks__list:hover, .allworks__list:focus {
