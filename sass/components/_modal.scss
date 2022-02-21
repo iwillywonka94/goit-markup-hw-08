@@ -1,0 +1,166 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 390px;
+  min-height: 609px;
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    min-height: 581px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #ffffff;
+  border-color: transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  @include dFlexCenter;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: #2196f3;
+  }
+}
+
+.modal-title {
+  @include fonts(20px, 700, 1.15, 0.03em);
+  text-align: center;
+  color: var(--primary-text-color);
+  margin-bottom: 12px;
+}
+
+.modal-field__label {
+  @include fonts(12px, 400, 1.16, 0.01em);
+  color: #757575;
+}
+
+.modal-field__wrapper {
+  position: relative;
+  margin-top: 4px;
+}
+
+.modal-field__input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  @include dFlexCenter;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+
+.modal-field__input:hover + .modal-field__icon {
+  fill: var(--accent-color);
+}
+
+.modal-field__input:focus + .modal-field__icon {
+  fill: var(--accent-color);
+}
+
+.modal-field__icon {
+  display: block;
+  position: absolute;
+  margin-left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-area {
+  margin-bottom: 20px;
+}
+
+.modal-area__text {
+  height: 96px;
+  width: 100%;
+  margin-top: 4px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include fonts(14px, 400, 1.14, 0.01em);
+  &:hover,
+  &:focus {
+    border-color: #2196f3;
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal-checkbox__label {
+  @include dFlexCenter;
+  @include fonts(9px, 400, 1.71, 0.03em);
+  color: #757575;
+  @media screen and (min-width: 480px) {
+    @include fonts(12px, null, null, null);
+  }
+  @media screen and (min-width: 1200px) {
+    @include fonts(14px, null, null, null);
+  }
+}
+
+.modal-checkbox__span {
+  width: 15px;
+  height: 16px;
+  border: 1px solid var(--primary-text-color);
+  border-radius: 2px;
+  margin-right: 5px;
+  @include dFlexCenter;
+  margin-right: 8px;
+}
+
+.modal-checkbox__link {
+  color: var(--accent-color);
+  text-decoration-skip-ink: none;
+}
+
+/* ?  - не знал как сделать */
+
+.modal-checkbox__input:checked + .modal-checkbox__label .modal-checkbox__span {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.modal-checkbox__input:checked + .modal-checkbox__label .modal-checkbox__icon {
+  fill: #ffffff;
+}

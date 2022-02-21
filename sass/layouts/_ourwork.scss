@@ -1,0 +1,35 @@
+.work {
+  padding-top: 0;
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.ourwork__list {
+  display: flex;
+}
+
+.ourwork__item {
+  @include dFlexCenter;
+  text-align: center;
+  margin-right: 30px;
+  position: relative;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.ourwork__text {
+  padding: 27px 0;
+  position: absolute;
+  width: 100%;
+  min-height: 70px;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  @include fonts(14px, 700, 1.14, 0.03em);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  cursor: default;
+}
